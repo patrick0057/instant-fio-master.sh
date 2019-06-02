@@ -36,7 +36,7 @@ if [[ -f /etc/redhat-release ]]; then
     yum -y install zlib-devel gcc make git
 fi
 
-if ! hash benchmark 2>/dev/null; then
+if ! hash fio 2>/dev/null; then
     git clone git://git.kernel.dk/fio.git
     cd fio
     ./configure
