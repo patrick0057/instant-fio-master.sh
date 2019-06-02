@@ -20,18 +20,6 @@ while getopts "h" opt; do
         ;;
     esac
 done
-function checkpipecmd() {
-    RC=("${PIPESTATUS[@]}")
-    if [[ "$2" != "" ]]; then
-        PIPEINDEX=$2
-    else
-        PIPEINDEX=0
-    fi
-    if [ "${RC[${PIPEINDEX}]}" != "0" ]; then
-        echo "${green}$1${reset}"
-        exit 1
-    fi
-}
 if [[ $EUID -ne 0 ]]; then
     echo "This script must be run as root"
     exit 1
