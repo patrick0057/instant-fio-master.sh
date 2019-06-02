@@ -42,6 +42,10 @@ if ! hash fio 2>/dev/null; then
     ./configure
     make
     make install
+    if [[ '/usr/local/bin' != *"$PATH"* ]]; then
+        export PATH=/usr/local/bin:$PATH
+        echo 'export PATH=/usr/local/bin:$PATH' >>~/.bash_profile
+    fi
 else
     echo "fio is already installed."
 fi
