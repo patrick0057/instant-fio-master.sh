@@ -1,5 +1,10 @@
 # instant-fio-master.sh
-There isn't much to this script, it just installs dependencies for fio then compiles and installs fio from source.
+Simple script to install fio from source.  It does the following:
+
+- Installs dependencies automatically on RedHat and Debian based operating systems.
+- clones fio master branch
+- compiles fio from source then performs a make install
+- updates ~/.bash_profile to add /usr/local/bin/ to your PATH if it isn't already there
 
 Usage:
 ```bash
