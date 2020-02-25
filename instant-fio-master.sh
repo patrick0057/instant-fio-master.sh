@@ -44,6 +44,7 @@ if ! hash fio 2>/dev/null; then
     make install
     if [[ '/usr/local/bin' != *"$PATH"* ]]; then
         export PATH=/usr/local/bin:$PATH
+        echo "Run the following command or logout and log back in again so that your .bash_profile can add it for you."
         echo 'export PATH=/usr/local/bin:$PATH'
         echo 'export PATH=/usr/local/bin:$PATH' >>~/.bash_profile
     fi
